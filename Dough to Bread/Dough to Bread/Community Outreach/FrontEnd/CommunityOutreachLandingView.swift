@@ -86,7 +86,7 @@ struct CommunityOutreachLandingView: View {
                 
                 // This VStack will be for the rest of your buttons, spaced apart
                 VStack(spacing: 100) {
-                    Spacer().frame(height: 30) // Adjust for spacing
+                    Spacer().frame(height: 0) // Adjust for spacing
 
                     NavigationLink(destination: ScheduleCoachingView()) {
                         Text("Schedule Coaching")
@@ -123,11 +123,11 @@ struct CommunityOutreachLandingView: View {
                     
                     Spacer()
                 }
-                .padding(.top, 44) // Adjust this padding to ensure that VStack starts below the navigation bar area
+                .padding(.bottom, 20) // Adjust this padding to ensure that VStack starts below the navigation bar area
             }
             .background(Color(hex: "FFFFFF")) // Set the overall background color
             .navigationTitle("Community Outreach")
-            .navigationBarHidden(true)
+            .navigationBarHidden(false)
         }
     }
 }

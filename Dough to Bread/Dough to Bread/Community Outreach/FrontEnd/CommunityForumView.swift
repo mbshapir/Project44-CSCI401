@@ -9,20 +9,84 @@ import SwiftUI
 import Firebase
 
 struct CommunityForumView: View {
-    @ObservedObject var viewModel = CommunityForum()
-    
+    @ObservedObject var viewModel = ForumViewModel()
+    @State private var newMessageText = ""
+    @Environment(\.presentationMode) var presentationMode
+
     var body: some View {
         NavigationView {
-            List(viewModel.messages) { message in
-                VStack(alignment: .leading) {
-                    Text(message.text)
+            VStack {
+                List(viewModel.messages) { message in
+                    VStack(alignment: .leading) {
+                        Text(message.text)
+                            .padding()
+                        Text(message.timestamp, style: .time)
+                            .font(.caption)
+                            .foregroundColor(.gray)
+                    }
+                }
+                
+                HStack {
+                    TextField("Enter your message here", text: $newMessageText)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .font(.custom("Poppins-SemiBold", size: 20))
+                        .foregroundColor(.blue)
+                        .padding(6)
+                        .background(Color.white)
+                        .cornerRadius(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color(hex: "000000"), lineWidth: 2)
+                        )
+                    
+                    Button(action: {
+                        viewModel.sendMessage(newMessageText)
+                        newMessageText = ""
+                    }) {
+                        Text("Send")
+                            .font(.custom("Poppins-SemiBold", size: 26))
+                            .padding(8)
+                            .background(Color.white)
+                            .cornerRadius(10)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color(hex: "000000"), lineWidth: 2)
+                            )
+                    }
+                }
+                .padding()
+                .background(Color(hex: "597836"))
+            }
+//            .background(Color(hex: "000000"))
+            .navigationBarTitle("Community Forum", displayMode: .inline)
+            
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        self.presentationMode.wrappedValue.dismiss()
+                    }) {
+                        Image(systemName: "arrow.left")
+                            .foregroundColor(.black)
+                            .font(.system(size: 20))
+                            .offset(x: 5, y: 16)
+                    }
+                }
+                
+                ToolbarItem(placement: .principal) {
+                    Text("Community Forum")
+                        .font(.custom("Poppins-SemiBold", size: 34))
+                        .foregroundColor(Color.white)
                         .padding()
-                    Text(message.timestamp, style: .time)
-                        .font(.caption)
-                        .foregroundColor(.gray)
+                        .background(Color(hex: "597836"))
+                        .cornerRadius(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color(hex: "000000"), lineWidth: 2)
+                        )
+                        .padding(.top, 28)
                 }
             }
-            .navigationBarTitle("Community Forum")
             .onAppear() {
                 self.viewModel.fetchMessages()
             }
@@ -30,41 +94,7 @@ struct CommunityForumView: View {
     }
 }
 
-struct Message: Identifiable {
-    let id: String
-    let text: String
-    let timestamp: Date
-}
-
-class ForumViewModel: ObservableObject {
-    @Published var messages = [Message]()
-    
-    private var db = Firestore.firestore()
-    
-    func fetchMessages() {
-        db.collection("communityMessages").order(by: "timestamp", descending: true).addSnapshotListener { (querySnapshot, error) in
-            guard let documents = querySnapshot?.documents else {
-                print("No documents")
-                return
-            }
-            
-            self.messages = documents.map { queryDocumentSnapshot -> Message in
-                let data = queryDocumentSnapshot.data()
-                let id = queryDocumentSnapshot.documentID
-                let text = data["text"] as? String ?? ""
-                let timestamp = (data["timestamp"] as? Timestamp)?.dateValue() ?? Date()
-                return Message(id: id, text: text, timestamp: timestamp)
-            }
-        }
-    }
-    
-    func sendMessage(text: String) {
-        let newMessage = db.collection("communityMessages").document()
-        newMessage.setData(["text": text, "timestamp": Timestamp(date: Date())])
-    }
-}
-
-struct CommunityForumPage_Previews: PreviewProvider {
+struct CommunityForumView_Previews: PreviewProvider {
     static var previews: some View {
         CommunityForumView()
     }

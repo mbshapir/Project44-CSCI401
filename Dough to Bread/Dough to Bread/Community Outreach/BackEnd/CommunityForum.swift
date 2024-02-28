@@ -8,51 +8,52 @@
 import Foundation
 import Firebase
 
-class CommunityForum: ObservableObject {
-    @Published var messages = [ForumMessage]()
+class ForumViewModel: ObservableObject {
+    @Published var messages = [Message]()
     
-    private var db = Firestore.firestore()
+    private var dbRef: DatabaseReference
     
     init() {
-        self.fetchMessages()
+        self.dbRef = Database.database().reference(withPath: "communityMessages")
+        fetchMessages()
     }
     
     func fetchMessages() {
-        db.collection("forum").order(by: "timestamp", descending: false)
-            .addSnapshotListener { (querySnapshot, error) in
-                guard let documents = querySnapshot?.documents else {
-                    print("No documents")
-                    return
-                }
-                
-                self.messages = documents.map { queryDocumentSnapshot -> ForumMessage in
-                    let data = queryDocumentSnapshot.data()
-                    let timestamp = data["timestamp"] as? Timestamp
-                    let text = data["text"] as? String ?? ""
-                    let date = timestamp?.dateValue() ?? Date()
-                    return ForumMessage(id: queryDocumentSnapshot.documentID, text: text, timestamp: date)
+        dbRef.queryOrdered(byChild: "timestamp").observe(.value, with: { snapshot in
+            var newMessages: [Message] = []
+            for child in snapshot.children {
+                if let snapshot = child as? DataSnapshot,
+                   let value = snapshot.value as? [String: AnyObject],
+                   let text = value["text"] as? String,
+                   let timestamp = value["timestamp"] as? Double {
+                    let id = snapshot.key
+                    let message = Message(id: id, text: text, timestamp: Date(timeIntervalSince1970: timestamp))
+                    newMessages.append(message)
                 }
             }
+            self.messages = newMessages.reversed()
+        })
     }
     
     func sendMessage(_ messageText: String) {
-        let newMessage = ForumMessage(text: messageText, timestamp: Date())
-        var ref: DocumentReference? = nil
-        ref = db.collection("forum").addDocument(data: [
-            "text": newMessage.text,
-            "timestamp": newMessage.timestamp
-        ]) { error in
-            if let err = error {
-                print("Error adding document: \(err)")
-            } else {
-                print("Document added with ID: \(ref!.documentID)")
-            }
+        // Check if the message text is empty
+        guard !messageText.isEmpty else {
+            print("Error: Message text is empty")
+            return
         }
+        
+        let newMessageRef = dbRef.childByAutoId()
+        let newMessageData: [String: Any] = [
+            "text": messageText,
+            "timestamp": Date().timeIntervalSince1970
+        ]
+        newMessageRef.setValue(newMessageData)
     }
 }
 
-struct ForumMessage: Identifiable {
-    var id: String = UUID().uuidString
+struct Message: Identifiable {
+    var id: String
     var text: String
     var timestamp: Date
 }
+

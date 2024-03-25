@@ -21,6 +21,7 @@
 		96A2ABEC2B706D09007444FC /* ScheduleCoachingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2ABEB2B706D08007444FC /* ScheduleCoachingView.swift */; };
 		96A2ABF02B706D1B007444FC /* MessageCoachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2ABEF2B706D1B007444FC /* MessageCoachView.swift */; };
 		96A2ABF42B706D2E007444FC /* CommunityForumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A2ABF32B706D2E007444FC /* CommunityForumView.swift */; };
+		96E148A82BB213E3002C5718 /* MessageCoach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E148A72BB213E3002C5718 /* MessageCoach.swift */; };
 		96EB8B2C2BA95ED00043DA04 /* ScheduleCoaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EB8B2B2BA95ED00043DA04 /* ScheduleCoaching.swift */; };
 		FA93114A2B6A0C67006F2C19 /* Dough_to_BreadApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9311492B6A0C67006F2C19 /* Dough_to_BreadApp.swift */; };
 		FA93114C2B6A0C67006F2C19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA93114B2B6A0C67006F2C19 /* ContentView.swift */; };
@@ -62,6 +63,7 @@
 		96A2ABEB2B706D08007444FC /* ScheduleCoachingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCoachingView.swift; sourceTree = "<group>"; };
 		96A2ABEF2B706D1B007444FC /* MessageCoachView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCoachView.swift; sourceTree = "<group>"; };
 		96A2ABF32B706D2E007444FC /* CommunityForumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityForumView.swift; sourceTree = "<group>"; };
+		96E148A72BB213E3002C5718 /* MessageCoach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCoach.swift; sourceTree = "<group>"; };
 		96EB8B2B2BA95ED00043DA04 /* ScheduleCoaching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCoaching.swift; sourceTree = "<group>"; };
 		FA9311462B6A0C67006F2C19 /* Dough to Bread.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dough to Bread.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA9311492B6A0C67006F2C19 /* Dough_to_BreadApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dough_to_BreadApp.swift; sourceTree = "<group>"; };
@@ -125,8 +127,9 @@
 			isa = PBXGroup;
 			children = (
 				96A2ABDC2B705181007444FC /* CommunityOutreachLanding.swift */,
-				969081242B819AAC0058BA9C /* CommunityForum.swift */,
 				96EB8B2B2BA95ED00043DA04 /* ScheduleCoaching.swift */,
+				96E148A72BB213E3002C5718 /* MessageCoach.swift */,
+				969081242B819AAC0058BA9C /* CommunityForum.swift */,
 			);
 			path = BackEnd;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				FA93114C2B6A0C67006F2C19 /* ContentView.swift in Sources */,
 				96A2ABEC2B706D09007444FC /* ScheduleCoachingView.swift in Sources */,
 				96EB8B2C2BA95ED00043DA04 /* ScheduleCoaching.swift in Sources */,
+				96E148A82BB213E3002C5718 /* MessageCoach.swift in Sources */,
 				96A2ABDB2B705151007444FC /* CommunityOutreachLandingView.swift in Sources */,
 				FACABA472B742AEC00528D2D /* QuizzesView.swift in Sources */,
 				969081252B819AAC0058BA9C /* CommunityForum.swift in Sources */,

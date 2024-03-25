@@ -14,7 +14,36 @@ struct CommunityForumView: View {
     @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
-        NavigationView {
+        VStack(spacing: 0) {
+            HStack {
+                Button(action: {
+                    presentationMode.wrappedValue.dismiss()
+                }) {
+                    Image(systemName: "arrow.left")
+                        .aspectRatio(contentMode: .fit)
+                        .foregroundColor(.black)
+                        .padding(.all, 12)
+                        .font(.system(size: 16))
+                }
+                .background(Color(hex: "597836"))
+                .clipShape(Circle())
+                .padding(.leading)
+
+                Text("Community Forum")
+                    .font(.custom("Poppins-SemiBold", size: 32))
+                    .foregroundColor(Color.white)
+                    .padding(.horizontal)
+                    .background(Color(hex: "597836"))
+                    .cornerRadius(10)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color(hex: "000000"), lineWidth: 2)
+                    )
+            }
+            .offset(x: -10, y: 0)
+            .padding(.top, 0)
+            .padding(.bottom)
+
             VStack {
                 List(viewModel.messages) { message in
                     VStack(alignment: .leading) {
@@ -57,40 +86,12 @@ struct CommunityForumView: View {
                 .padding()
                 .background(Color(hex: "597836"))
             }
-//            .background(Color(hex: "000000"))
-            .navigationBarTitle("Community Forum", displayMode: .inline)
-            
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: {
-                        self.presentationMode.wrappedValue.dismiss()
-                    }) {
-                        Image(systemName: "arrow.left")
-                            .foregroundColor(.black)
-                            .font(.system(size: 20))
-                            .offset(x: 5, y: 16)
-                    }
-                }
-                
-                ToolbarItem(placement: .principal) {
-                    Text("Community Forum")
-                        .font(.custom("Poppins-SemiBold", size: 34))
-                        .foregroundColor(Color.white)
-                        .padding()
-                        .background(Color(hex: "597836"))
-                        .cornerRadius(10)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color(hex: "000000"), lineWidth: 2)
-                        )
-                        .padding(.top, 28)
-                }
-            }
             .onAppear() {
                 self.viewModel.fetchMessages()
             }
         }
+        .navigationBarTitle("", displayMode: .inline)
+        .navigationBarHidden(true)
     }
 }
 
@@ -99,3 +100,4 @@ struct CommunityForumView_Previews: PreviewProvider {
         CommunityForumView()
     }
 }
+

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0918508A2BCF298600910509 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091850892BCF298600910509 /* LogInView.swift */; };
+		098E4FB92BCF2ACA00324236 /* ProfilePicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098E4FB82BCF2ACA00324236 /* ProfilePicView.swift */; };
+		098E4FBB2BCF2ADF00324236 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098E4FBA2BCF2ADF00324236 /* AuthViewModel.swift */; };
+		098E4FBD2BCF2B2500324236 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098E4FBC2BCF2B2500324236 /* Users.swift */; };
+		098E4FBF2BCF320D00324236 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098E4FBE2BCF320D00324236 /* CreateAccountView.swift */; };
 		969081132B8189100058BA9C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 969081122B8189100058BA9C /* FirebaseAuth */; };
 		969081152B8189100058BA9C /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 969081142B8189100058BA9C /* FirebaseDatabase */; };
 		969081172B8189100058BA9C /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 969081162B8189100058BA9C /* FirebaseDatabaseSwift */; };
@@ -56,6 +61,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		091850892BCF298600910509 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		098E4FB82BCF2ACA00324236 /* ProfilePicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicView.swift; sourceTree = "<group>"; };
+		098E4FBA2BCF2ADF00324236 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		098E4FBC2BCF2B2500324236 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		098E4FBE2BCF320D00324236 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 		969081222B81992B0058BA9C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		969081242B819AAC0058BA9C /* CommunityForum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityForum.swift; sourceTree = "<group>"; };
 		96A2ABDA2B705151007444FC /* CommunityOutreachLandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityOutreachLandingView.swift; sourceTree = "<group>"; };
@@ -116,6 +126,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0918508D2BCF2A4B00910509 /* profile */ = {
+			isa = PBXGroup;
+			children = (
+				091850892BCF298600910509 /* LogInView.swift */,
+				098E4FB82BCF2ACA00324236 /* ProfilePicView.swift */,
+				098E4FBA2BCF2ADF00324236 /* AuthViewModel.swift */,
+				098E4FBC2BCF2B2500324236 /* Users.swift */,
+				098E4FBE2BCF320D00324236 /* CreateAccountView.swift */,
+			);
+			path = profile;
+			sourceTree = "<group>";
+		};
 		9690810B2B81883C0058BA9C /* Community Outreach */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +192,7 @@
 		FA9311482B6A0C67006F2C19 /* Dough to Bread */ = {
 			isa = PBXGroup;
 			children = (
+				0918508D2BCF2A4B00910509 /* profile */,
 				FA4DB8802BB413AA002BD702 /* FinancialPollView.swift */,
 				969081222B81992B0058BA9C /* GoogleService-Info.plist */,
 				96A2ABE22B705DF3007444FC /* Dough-to-Bread-Info.plist */,
@@ -356,15 +379,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA93114C2B6A0C67006F2C19 /* ContentView.swift in Sources */,
+				0918508A2BCF298600910509 /* LogInView.swift in Sources */,
 				96A2ABEC2B706D09007444FC /* ScheduleCoachingView.swift in Sources */,
+				098E4FBF2BCF320D00324236 /* CreateAccountView.swift in Sources */,
 				FA4DB8812BB413AA002BD702 /* FinancialPollView.swift in Sources */,
 				96EB8B2C2BA95ED00043DA04 /* ScheduleCoaching.swift in Sources */,
 				96E148A82BB213E3002C5718 /* MessageCoach.swift in Sources */,
+				098E4FBB2BCF2ADF00324236 /* AuthViewModel.swift in Sources */,
 				96A2ABDB2B705151007444FC /* CommunityOutreachLandingView.swift in Sources */,
 				969081252B819AAC0058BA9C /* CommunityForum.swift in Sources */,
 				FACABA432B7400E300528D2D /* FinancialLiteracyModule.swift in Sources */,
 				96A2ABF02B706D1B007444FC /* MessageCoachView.swift in Sources */,
 				96A2ABDD2B705181007444FC /* CommunityOutreachLanding.swift in Sources */,
+				098E4FBD2BCF2B2500324236 /* Users.swift in Sources */,
+				098E4FB92BCF2ACA00324236 /* ProfilePicView.swift in Sources */,
 				FACABA412B74003700528D2D /* FinancialLiteracyModuleView.swift in Sources */,
 				FAF76EBC2BB3E3DE000E6B79 /* SavingsView.swift in Sources */,
 				FA93114A2B6A0C67006F2C19 /* Dough_to_BreadApp.swift in Sources */,

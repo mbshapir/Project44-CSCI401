@@ -15,17 +15,17 @@ const timestamp = Date.now(); // Get current timestamp
 const excelFilePath = `./messages.xlsx`; // Include timestamp in filename
 
 
-console.log('Starting here at the top.');
+
 
 async function fetchAndWriteToExcel() {
     try {
-      console.log('Starting here.');
+      
       // 1. Fetch messages from Firebase
       const messagesRef = admin.database().ref('coachMessages'); // Adjusted path
   
       const messagesSnapshot = await messagesRef.once('value');
       const messagesData = []; // Array to store extracted messages
-      console.log('Getting here.');
+      
   
       // Iterate through each child node under 'coachMessages'
       messagesSnapshot.forEach((messageSnapshot) => {
@@ -62,7 +62,7 @@ async function fetchAndWriteToExcel() {
       });
   
       // 3. Write data to Excel file (rest remains the same)
-    console.log(excelFilePath)
+    
     let workbook;
       if (!fs.existsSync(excelFilePath)) {
         // Create a new workbook (empty Excel file)
@@ -72,11 +72,11 @@ async function fetchAndWriteToExcel() {
           ['ID', 'Subject', 'Timestamp', 'Message'] // Header row
         ]);
         XLSX.utils.book_append_sheet(workbook, worksheet, 'Sheet1');
-         console.log('new one created');
+         
       } else {
         // File exists, proceed with reading or writing using readFile
          workbook = XLSX.readFile(excelFilePath, { createSheet: true });
-         console.log('new one not created');
+         
         
       }
     const worksheet = workbook.Sheets['Sheet1'];

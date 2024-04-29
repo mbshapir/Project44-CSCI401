@@ -20,6 +20,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct YourApp: App {
+    
+    @StateObject var authview = AuthViewModel()
   // register app delegate for Firebase setup
   @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
@@ -27,8 +29,10 @@ struct YourApp: App {
   var body: some Scene {
     WindowGroup {
       NavigationView {
-        ContentView()
+        LogInView()
       }
+      .environmentObject(authview)
+
     }
   }
 }

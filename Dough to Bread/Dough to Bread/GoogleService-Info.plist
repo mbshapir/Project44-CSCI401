@@ -26,5 +26,7 @@
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:771664176466:ios:0c957b915b896767f8068b</string>
+	<key>DATABASE_URL</key>
+	<string>https://dough-to-bread-default-rtdb.firebaseio.com</string>
 </dict>
 </plist>

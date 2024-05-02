@@ -31,15 +31,11 @@
 		FA4DB8812BB413AA002BD702 /* FinancialPollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4DB8802BB413AA002BD702 /* FinancialPollView.swift */; };
 		FA4DB8832BB41525002BD702 /* FinancialDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4DB8822BB41525002BD702 /* FinancialDashboardView.swift */; };
 		FA93114A2B6A0C67006F2C19 /* Dough_to_BreadApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9311492B6A0C67006F2C19 /* Dough_to_BreadApp.swift */; };
-		FA93114C2B6A0C67006F2C19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA93114B2B6A0C67006F2C19 /* ContentView.swift */; };
 		FA93114E2B6A0C6A006F2C19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA93114D2B6A0C6A006F2C19 /* Assets.xcassets */; };
 		FA9311512B6A0C6A006F2C19 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA9311502B6A0C6A006F2C19 /* Preview Assets.xcassets */; };
 		FA93115B2B6A0C6A006F2C19 /* Dough_to_BreadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA93115A2B6A0C6A006F2C19 /* Dough_to_BreadTests.swift */; };
 		FA9311652B6A0C6A006F2C19 /* Dough_to_BreadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9311642B6A0C6A006F2C19 /* Dough_to_BreadUITests.swift */; };
 		FA9311672B6A0C6A006F2C19 /* Dough_to_BreadUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9311662B6A0C6A006F2C19 /* Dough_to_BreadUITestsLaunchTests.swift */; };
-		FACABA412B74003700528D2D /* FinancialLiteracyModuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACABA402B74003700528D2D /* FinancialLiteracyModuleView.swift */; };
-		FACABA432B7400E300528D2D /* FinancialLiteracyModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACABA422B7400E300528D2D /* FinancialLiteracyModule.swift */; };
-		FACABA452B74299700528D2D /* InteractiveCoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACABA442B74299700528D2D /* InteractiveCoursesView.swift */; };
 		FAF76EBC2BB3E3DE000E6B79 /* SavingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF76EBB2BB3E3DE000E6B79 /* SavingsView.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,7 +76,6 @@
 		FA4DB8822BB41525002BD702 /* FinancialDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancialDashboardView.swift; sourceTree = "<group>"; };
 		FA9311462B6A0C67006F2C19 /* Dough to Bread.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dough to Bread.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA9311492B6A0C67006F2C19 /* Dough_to_BreadApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dough_to_BreadApp.swift; sourceTree = "<group>"; };
-		FA93114B2B6A0C67006F2C19 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FA93114D2B6A0C6A006F2C19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA9311502B6A0C6A006F2C19 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA9311562B6A0C6A006F2C19 /* Dough to BreadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dough to BreadTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,9 +83,6 @@
 		FA9311602B6A0C6A006F2C19 /* Dough to BreadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dough to BreadUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA9311642B6A0C6A006F2C19 /* Dough_to_BreadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dough_to_BreadUITests.swift; sourceTree = "<group>"; };
 		FA9311662B6A0C6A006F2C19 /* Dough_to_BreadUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dough_to_BreadUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		FACABA402B74003700528D2D /* FinancialLiteracyModuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancialLiteracyModuleView.swift; sourceTree = "<group>"; };
-		FACABA422B7400E300528D2D /* FinancialLiteracyModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancialLiteracyModule.swift; sourceTree = "<group>"; };
-		FACABA442B74299700528D2D /* InteractiveCoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveCoursesView.swift; sourceTree = "<group>"; };
 		FAF76EBB2BB3E3DE000E6B79 /* SavingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,6 +168,7 @@
 				FA9311592B6A0C6A006F2C19 /* Dough to BreadTests */,
 				FA9311632B6A0C6A006F2C19 /* Dough to BreadUITests */,
 				FA9311472B6A0C67006F2C19 /* Products */,
+				FAC395882BE2F891002982DE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -198,10 +191,6 @@
 				96A2ABE22B705DF3007444FC /* Dough-to-Bread-Info.plist */,
 				FA9311492B6A0C67006F2C19 /* Dough_to_BreadApp.swift */,
 				9690810B2B81883C0058BA9C /* Community Outreach */,
-				FA93114B2B6A0C67006F2C19 /* ContentView.swift */,
-				FACABA402B74003700528D2D /* FinancialLiteracyModuleView.swift */,
-				FACABA422B7400E300528D2D /* FinancialLiteracyModule.swift */,
-				FACABA442B74299700528D2D /* InteractiveCoursesView.swift */,
 				FA93114D2B6A0C6A006F2C19 /* Assets.xcassets */,
 				FA93114F2B6A0C6A006F2C19 /* Preview Content */,
 				FAF76EBB2BB3E3DE000E6B79 /* SavingsView.swift */,
@@ -233,6 +222,13 @@
 				FA9311662B6A0C6A006F2C19 /* Dough_to_BreadUITestsLaunchTests.swift */,
 			);
 			path = "Dough to BreadUITests";
+			sourceTree = "<group>";
+		};
+		FAC395882BE2F891002982DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,7 +374,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA93114C2B6A0C67006F2C19 /* ContentView.swift in Sources */,
 				0918508A2BCF298600910509 /* LogInView.swift in Sources */,
 				96A2ABEC2B706D09007444FC /* ScheduleCoachingView.swift in Sources */,
 				098E4FBF2BCF320D00324236 /* CreateAccountView.swift in Sources */,
@@ -388,15 +383,12 @@
 				098E4FBB2BCF2ADF00324236 /* AuthViewModel.swift in Sources */,
 				96A2ABDB2B705151007444FC /* CommunityOutreachLandingView.swift in Sources */,
 				969081252B819AAC0058BA9C /* CommunityForum.swift in Sources */,
-				FACABA432B7400E300528D2D /* FinancialLiteracyModule.swift in Sources */,
 				96A2ABF02B706D1B007444FC /* MessageCoachView.swift in Sources */,
 				96A2ABDD2B705181007444FC /* CommunityOutreachLanding.swift in Sources */,
 				098E4FBD2BCF2B2500324236 /* Users.swift in Sources */,
 				098E4FB92BCF2ACA00324236 /* ProfilePicView.swift in Sources */,
-				FACABA412B74003700528D2D /* FinancialLiteracyModuleView.swift in Sources */,
 				FAF76EBC2BB3E3DE000E6B79 /* SavingsView.swift in Sources */,
 				FA93114A2B6A0C67006F2C19 /* Dough_to_BreadApp.swift in Sources */,
-				FACABA452B74299700528D2D /* InteractiveCoursesView.swift in Sources */,
 				96A2ABF42B706D2E007444FC /* CommunityForumView.swift in Sources */,
 				FA4DB8832BB41525002BD702 /* FinancialDashboardView.swift in Sources */,
 			);
